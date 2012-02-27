@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+.navbar-fixed-top .title_shadow {
+  font-weight: bold;
+  font-size: 20px;
+  position:absolute;
+  top:10px;
+  left:50%;
+  margin-left:-14px;       
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+}
+.title_shadow:hover {
+  text-decoration: none;
+}
+
+.scumbag-unit {
+  padding: 60px;
+  margin-bottom: 30px;
+  background-color: #999;
+  background-image: -moz-linear-gradient(center top , #DDD, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#DDD), to(#000000));
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
