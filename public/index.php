@@ -14,6 +14,20 @@ set_include_path(implode(PATH_SEPARATOR, array(
     get_include_path(),
 )));
 
+//Translator configuration
+//Se requiere el autoloader para cargar la clase
+//Zend_Translate
+require_once 'Zend/Loader/Autoloader.php';  
+Zend_Loader_Autoloader::getInstance ();  
+
+$translator = new Zend_Translate(
+                'array',
+                '../resources/languages',
+                'es',
+                array('scan' => Zend_Translate::LOCALE_DIRECTORY)
+);
+Zend_Validate_Abstract::setDefaultTranslator($translator);
+
 /** Zend_Application */
 require_once 'Zend/Application.php';
 
