@@ -42,24 +42,68 @@ $this->headTitle('Scumbag Blues Music & Stuff');
       		<div class="row-fluid">
         		<div class="span3">
           			<div class="well sidebar-nav">
-            			<ul class="nav nav-list-scumbag">
-			              <li class="nav-header">Sidebar</li>
-			              <li class="active"><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li class="nav-header">Sidebar</li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li class="nav-header">Sidebar</li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-			              <li><a href="#">Link</a></li>
-            			</ul>
+          			 <div>&nbsp;&nbsp;</div>
+            			<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+							<script>
+							new TWTR.Widget({
+							  version: 2,
+							  type: 'profile',
+							  rpp: 4,
+							  interval: 30000,
+							  width: 250,
+							  height: 300,
+							  theme: {
+							    shell: {
+							      background: '#999999',
+							      color: '#ffffff'
+							    },
+							    tweets: {
+							      background: '#000000',
+							      color: '#ffffff',
+							      links: '#e33b3b'
+							    }
+							  },
+							  features: {
+							    scrollbar: false,
+							    loop: false,
+							    live: false,
+							    behavior: 'all'
+							  }
+							}).render().setUser('scumbagblues').start();
+							</script>
+							<div>&nbsp;</div>
+							<hr>
+							<div>&nbsp;</div>
+							<script>
+							new TWTR.Widget({
+							  version: 2,
+							  type: 'search',
+							  search: '@offspring',
+							  interval: 30000,
+							  title: 'The Offspring',
+							  subject: '@offspring',
+							  width: 250,
+							  height: 300,
+							  theme: {
+							    shell: {
+							      background: '#000000',
+							      color: '#eb4444'
+							    },
+							    tweets: {
+							      background: '#eaeaea',
+							      color: '#e60909',
+							      links: '#0079ad'
+							    }
+							  },
+							  features: {
+							    scrollbar: true,
+							    loop: true,
+							    live: true,
+							    behavior: 'default'
+							  }
+							}).render().start();
+							</script>
+							
           			</div><!--/.well -->
         		</div><!--/span-->
         		<div class="span9">
@@ -69,38 +113,51 @@ $this->headTitle('Scumbag Blues Music & Stuff');
 		            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
 		            <p><a class="btn btn-primary-scumbag btn-large">Learn more &raquo;</a></p>
 		          </div>
+		          <h3>Recomendaciones</h3>
 		          <div class="row-fluid">
 		            <div class="span4">
-		              <h2>Heading</h2>
-		              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		              <p><a class="btn" href="#">View details &raquo;</a></p>
+		            	<div class='scumbag-box'>
+		              		<h2>Heading</h2>
+		              		<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+		              		<p><a class="btn" href="#">View details &raquo;</a></p>
+		            	</div>
 		            </div><!--/span-->
 		            <div class="span4">
-		              <h2>Heading</h2>
-		              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		              <p><a class="btn" href="#">View details &raquo;</a></p>
+		            	<div class='scumbag-box'>
+			              <h2>Heading</h2>
+			              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			              <p><a class="btn" href="#">View details &raquo;</a></p>
+		              	</div>
 		            </div><!--/span-->
 		            <div class="span4">
-		              <h2>Heading</h2>
-		              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		              <p><a class="btn" href="#">View details &raquo;</a></p>
+		            	<div class='scumbag-box'>
+			              <h2>Heading</h2>
+			              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			              <p><a class="btn" href="#">View details &raquo;</a></p>
+		              	</div>
 		            </div><!--/span-->
 		          </div><!--/row-->
 		          <div class="row-fluid">
 		            <div class="span4">
-		              <h2>Heading</h2>
-		              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		              <p><a class="btn" href="#">View details &raquo;</a></p>
+		            	<div class='scumbag-box'>
+			              <h2>Heading</h2>
+			              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			              <p><a class="btn" href="#">View details &raquo;</a></p>
+		              	</div>
 		            </div><!--/span-->
 		            <div class="span4">
-		              <h2>Heading</h2>
-		              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		              <p><a class="btn" href="#">View details &raquo;</a></p>
+		            	<div class='scumbag-box'>
+			              <h2>Heading</h2>
+			              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			              <p><a class="btn" href="#">View details &raquo;</a></p>
+		              	</div>
 		            </div><!--/span-->
 		            <div class="span4">
-		              <h2>Heading</h2>
-		              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		              <p><a class="btn" href="#">View details &raquo;</a></p>
+		            	<div class='scumbag-box'>
+			              <h2>Heading</h2>
+			              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			              <p><a class="btn" href="#">View details &raquo;</a></p>
+			        	</div>
 		            </div><!--/span-->
 		          </div><!--/row-->
         		</div><!--/span-->
@@ -109,7 +166,7 @@ $this->headTitle('Scumbag Blues Music & Stuff');
      	 	<hr>
      	 	
 	  		<footer>
-        		<p>&copy; <a href='http://www.twitter.com/scumbagblues'>@scumbagblues 2012</a></p>
+        		<p>&copy; <a href='http://twitter.com/scumbagblues'>@scumbagblues 2012</a></p>
       		</footer>
     	</div>
 	</body>
