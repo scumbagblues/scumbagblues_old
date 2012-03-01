@@ -5,7 +5,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	
 	protected function _initJquery() {
 
-		
 		$view = new Zend_View($this->getOptions()); //get the view object
 		//add the jquery view helper path into your project
 		$view->addHelperPath("ZendX/JQuery/View/Helper", "ZendX_JQuery_View_Helper");
