@@ -3,10 +3,13 @@ echo $this->doctype('HTML5');
 $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
 $this->headTitle()->setSeparator(' - ');
 $this->headTitle('Scumbag Blues Music & Stuff');
+$auth = Zend_Auth::getInstance();
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 	<head>
 		<?=$this->headMeta(); ?>
+		<!-- Etiqueta para que el css se ahaga "responsive" y se ajuste al tamaño de la pantalla -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<?=$this->headTitle(); ?>
 		<?=$this->jQuery();?>
 
@@ -27,13 +30,9 @@ $this->headTitle('Scumbag Blues Music & Stuff');
           			
           				<div class="nav-collapse">
             				<ul class="nav">
-              					<li class="active"><a href="#">Home</a></li>
-              					<li><a href="#about">Galer&iacute;a de Conciertos</a></li>
-              					<li><a href="#reviews">Reviews</a></li>
-              					<li><a href="#contact">Contacto</a></li>
+              				  <?php echo $this->menuPrincipal();?>
             				</ul>
-            				
-            				<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+            				<?php echo $this->sesionUsuario();?>
             				<span class='title_shadow'>SCUMBAG BLUES</span>
           				</div><!--/.nav-collapse -->
           					
@@ -45,7 +44,11 @@ $this->headTitle('Scumbag Blues Music & Stuff');
         		<div class="span3">
           			<div class="well sidebar-nav">
           			 <div>&nbsp;&nbsp;</div>
-            			<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+            			Algo aquí
+							
+          			</div><!--/.well -->
+          			<div>
+          				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 							<script>
 							new TWTR.Widget({
 							  version: 2,
@@ -74,7 +77,6 @@ $this->headTitle('Scumbag Blues Music & Stuff');
 							}).render().setUser('scumbagblues').start();
 							</script>
 							<div>&nbsp;</div>
-							<hr>
 							<div>&nbsp;</div>
 							<script>
 							new TWTR.Widget({
@@ -105,15 +107,17 @@ $this->headTitle('Scumbag Blues Music & Stuff');
 							  }
 							}).render().start();
 							</script>
-							
-          			</div><!--/.well -->
+          			</div>
         		</div><!--/span-->
         		<div class="span9">
 		          <div class="hero-unit">
-		            <h1>Hello, world!</h1>
+		            <h1>Acceso a usuarios</h1>
+		            	<div>&nbsp;</div>
+		            	<?php if (!is_null($this->error_login)){?>
+		            	<div class='alert-message error'><?php echo $this->error_login;?></div>
+		            	<?php }?>
 						<?php echo $this->layout()->content; ?>
-		            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-		            <p><a class="btn btn-primary-scumbag btn-large">Learn more &raquo;</a></p>
+		                <!--<p><a class="btn btn-primary-scumbag btn-large">Learn more &raquo;</a></p>-->
 		          </div>
 		          <h3>Recomendaciones</h3>
 		          <div class="row-fluid">

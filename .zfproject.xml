@@ -28,13 +28,23 @@
             <controllerFile controllerName="Index">
               <actionMethod actionName="index"/>
             </controllerFile>
+            <controllerFile controllerName="Login">
+              <actionMethod actionName="index"/>
+            </controllerFile>
           </controllersDirectory>
-          <formsDirectory enabled="false"/>
+          <formsDirectory>
+            <formFile formName="Login"/>
+          </formsDirectory>
           <layoutsDirectory enabled="false"/>
-          <modelsDirectory/>
+          <modelsDirectory>
+            <modelFile modelName="Login"/>
+          </modelsDirectory>
           <viewsDirectory>
             <viewScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Login">
                 <viewScriptFile forActionName="index"/>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>
@@ -73,7 +83,7 @@
               <actionMethod actionName="index"/>
             </controllerFile>
           </controllersDirectory>
-          <formsDirectory enabled="false"/>
+          <formsDirectory/>
           <layoutsDirectory enabled="false"/>
           <modelsDirectory/>
           <viewsDirectory>
