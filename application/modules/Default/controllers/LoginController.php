@@ -6,11 +6,23 @@ class Default_LoginController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
+    	/*
+    	$front_controller = Zend_Controller_Front::getInstance();
+    	$login_plugin = $front_controller->getPlugin('Scumbag_Plugin_Auth');
+    	$front_controller->unregisterPlugin($login_plugin);*/
+    	
+    	$frontController = $this->getFrontController();
+		$plugin = $frontController->getPlugin('Scumbag_Plugin_Auth');
+		$frontController->unregisterPlugin($plugin);
+
     }
 
     public function indexAction()
     {
-        // action body
+        
+    	
+    	
+    	// action body
         $form_login = new Default_Form_Login();
        
         $this->view->form = $form_login;

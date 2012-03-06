@@ -10,6 +10,7 @@ class Default_Form_Login extends Zend_Form
     	$this->_attribs = array('class' => 'form-horizontal'); //Atributos para la forma
     	
     	//Se agrega la ruta del decorador
+    	
     	$this->addElementPrefixPaths(array(
             'decorator' => array('Scumbag_Form_Decorator' => 'Scumbag/Form/Decorator/'),
         ));
@@ -26,7 +27,7 @@ class Default_Form_Login extends Zend_Form
     												  'decorators'  => array('Composite')));
     												  //'decorators'   => array(array('DivTag'),array(Errors,array('class' => 'formErrors', 'placement' => 'prepend')))));
     	
-    	$this->addElement('submit', 'Enviar', array('class' => 'btn btn-primary-scumbag btn-large'));
+    	$this->addElement('submit', 'Enviar', array('class' => 'btn btn-primary-scumbag btn-large','decorators' => array('Submit')));
     }
 
 

@@ -74,6 +74,17 @@ class Scumbag_Form_Decorator_Composite extends Zend_Form_Decorator_Abstract {
 		return $element->getView ()->formErrors ( $messages );
 	}
 	
+	public function buildSubmit(){
+		$element 	= $this->getElement();
+		$messages 	= $element->getMessages();
+		
+		if (empty($messages)){
+			return '';
+		}
+
+		return $element->getView()->formSubmit($messages);
+	}
+	
 	public function buildDescription() {
 		$element = $this->getElement ();
 		$desc = $element->getDescription ();
@@ -95,6 +106,7 @@ class Scumbag_Form_Decorator_Composite extends Zend_Form_Decorator_Abstract {
 		$separator = $this->getSeparator ();
 		$placement = $this->getPlacement ();
 		$html_input= $this->buildLabelInput();
+		
 		$desc = $this->buildDescription ();
 		
 		$output = '<div class="form element">' . $html_input . $desc . '</div>';

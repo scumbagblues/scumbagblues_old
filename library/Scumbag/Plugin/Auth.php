@@ -9,7 +9,7 @@ class Scumbag_Plugin_Auth extends Zend_Controller_Plugin_Abstract{
 		$this->_auth = Zend_Auth::getInstance();	
 	}
 	
-	public function dispatchLoopStartup(Zend_Controller_Request_Abstract $request) {
+	public function preDispatch(Zend_Controller_Request_Abstract $request) {
 		try {
 			Zend_Session::start ();
 			if ($this->_auth->hasIdentity ()) {
@@ -17,7 +17,11 @@ class Scumbag_Plugin_Auth extends Zend_Controller_Plugin_Abstract{
 				//Zend_Debug::dump($this->_auth->getIdentity()->role);die;
 			} else {
 				//no esta autenticado
-				//$request->setModuleName ( 'Default' )->setControllerName ( 'index' )->setActionName ( 'index' );
+				$front = Zend_Controller_Front::getInstance();
+				$module = $front->getDefaultModule();
+				$controller = $front->getDefaultControllerName();
+				$action = $front->getDefaultAction();
+				//$request->setModuleName ( $module )->setControllerName ( $controller )->setActionName ( $action );
 			
 			}
 		} catch ( Zend_Session_Exception $e ) {

@@ -45,73 +45,17 @@ $auth = Zend_Auth::getInstance();
           			<div class="well sidebar-nav">
           			 <div>&nbsp;&nbsp;</div>
             			Algo aquí
+            			<div>&nbsp;</div>
+            			<div>&nbsp;</div>
+            			<div>&nbsp;</div>
+            			<div>&nbsp;</div>
+            			<div>&nbsp;</div>
 							
           			</div><!--/.well -->
-          			<div>
-          				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-							<script>
-							new TWTR.Widget({
-							  version: 2,
-							  type: 'profile',
-							  rpp: 4,
-							  interval: 30000,
-							  width: 250,
-							  height: 300,
-							  theme: {
-							    shell: {
-							      background: '#999999',
-							      color: '#ffffff'
-							    },
-							    tweets: {
-							      background: '#000000',
-							      color: '#ffffff',
-							      links: '#e33b3b'
-							    }
-							  },
-							  features: {
-							    scrollbar: false,
-							    loop: false,
-							    live: false,
-							    behavior: 'all'
-							  }
-							}).render().setUser('scumbagblues').start();
-							</script>
-							<div>&nbsp;</div>
-							<div>&nbsp;</div>
-							<script>
-							new TWTR.Widget({
-							  version: 2,
-							  type: 'search',
-							  search: '@offspring',
-							  interval: 30000,
-							  title: 'The Offspring',
-							  subject: '@offspring',
-							  width: 250,
-							  height: 300,
-							  theme: {
-							    shell: {
-							      background: '#000000',
-							      color: '#eb4444'
-							    },
-							    tweets: {
-							      background: '#eaeaea',
-							      color: '#e60909',
-							      links: '#0079ad'
-							    }
-							  },
-							  features: {
-							    scrollbar: true,
-							    loop: true,
-							    live: true,
-							    behavior: 'default'
-							  }
-							}).render().start();
-							</script>
-          			</div>
         		</div><!--/span-->
         		<div class="span9">
 		          <div class="hero-unit">
-		            <h1>Acceso a usuarios</h1>
+		            <h1></h1>
 		            	<div>&nbsp;</div>
 		            	<?php if (!is_null($this->error_login)){?>
 		            	<div class='alert-message error'><?php echo $this->error_login;?></div>
