@@ -27,7 +27,7 @@ class Default_Model_Login
 		
     	if($result->isValid()){
     		$data = $auth_adapter->getResultRowObject(array('id_usuario','username','nombre','apellidos'
-    														,'role'));
+    														,'id_rol'));
 																
             $auth->getStorage()->write($data);
     	}else{
